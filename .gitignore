@@ -1,0 +1,19 @@
+# Node.js dependencies 
+node_modules/
+# Environment variables 
+.env
+
+#Logs
+*.logs
+npm-debug.log*
+yarn-debug.log*
+
+# Vs Code Editor Settings
+.vscode/
+
+# Os-specific Files
+.DS_Store
+Thumbs.db
+
+# MySQL dumps or backups (if created)
+*.sql
