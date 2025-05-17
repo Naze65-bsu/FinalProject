@@ -1,7 +1,7 @@
-const app = require('./app');
-const sequelize = require('./config/db');
-require('dotenv').config();
-const Post = require('./models/post');
+const app = require("./app");
+const sequelize = require("./config/db");
+require("dotenv").config();
+const Post = require("./models/post");
 
 const PORT = process.env.PORT || 3000;
 
@@ -10,9 +10,9 @@ const PORT = process.env.PORT || 3000;
     await sequelize.authenticate();
     await sequelize.sync();
     app.listen(PORT, () =>
-      console.log('Server is running on http://localhost:${PORT}')
+      console.log(`Server is running on http://localhost:${PORT}`)
     );
   } catch (err) {
-    console.error('Database connection error:', err);
+    console.error("Database connection error:", err);
   }
 })();
