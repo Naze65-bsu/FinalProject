@@ -7,10 +7,7 @@ router.post("/", authenticate, controller.createPost);
 router.put("/:id", authenticate, controller.updatePost);
 router.delete("/:id", authenticate, controller.deletePost);
 
-router.get("/", controller.getAllPosts);
-router.get("/:id", controller.getPost);
-router.post("/", controller.createPost);
-router.put("/:id", controller.updatePost);
-router.delete("/:id", controller.deletePost);
+router.get("/", authenticate, controller.getAllPosts);
+router.get("/:id", authenticate, controller.getPost);
 
 module.exports = router;
